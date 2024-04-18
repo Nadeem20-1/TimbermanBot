@@ -16,7 +16,7 @@ File Structure:
 -
 To run the file, ensure you have timberman installed. Install the required libraries within the requirements.txt using 'pip install -r requirements.txt'.
 Open up 'timbermanbot.py', and run it. View where the output window is grabbing the screenshots from, and move timberman within said window.
-Play, and let it run! Ensure the game window is selected after the CV2 window pops up!
+Play, and let it run! Ensure the game window is selected after the CV2 window pops up. Within the game settings, set the game to 'Windowed'. Resolution shouln't matter, but I know it works with 1800x1169.
 
 timberman_old.py was an attempt at running the game controls and screenshotting separately on different processes. This works in terms of speeding up the application itself, but an issue arises when it comes to variable access and changes. There will be times where timberman and branch intersection can occur at the exact same time as the program inputs a left/right key, KILLING timberman in the process! Not good! I tried to fix this issue by introducing locks, but I am at a standstill. Please message me if you have any suggestions. The code is also slightly outdated, as I just worked on the main timberman.py.
 
