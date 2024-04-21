@@ -25,9 +25,10 @@ class TimbermanBot:
         self.game_stopped = False
         self.direction = True
         self.message = False
+        self.sct = mss.mss()
         
         pyautogui.PAUSE = 0.0
-        self.key_delay = 0.1
+        self.key_delay = 0.05
     
     # Grabbed this IOU function online. There are a couple ways
     # to do so, but they produce similar results.
@@ -63,11 +64,7 @@ class TimbermanBot:
                     bounding_box = {'top': window_dim[1]+20, 'left' : window_dim[0]+150, 'width' : window_dim[2]-300, 'height': window_dim[3]-20}
                     
                     middle = (window_dim[2]) / 2
-                    print(window_dim)
-                    print(window_dim[2], window_dim[0])
-                    print(middle)
-                    sct = mss.mss()
-                    img = sct.grab(bounding_box)
+                    img = self.sct.grab(bounding_box)
                     img = np.array(img)
                     img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
                     results = self.model3(img, verbose=False)
