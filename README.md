@@ -37,7 +37,6 @@ There is also a big issue when it comes to how resource intensive this can be. T
 
 To-Do:
 -
-- Include support for Windows environments (Currently only tested for Apple devices)
 - Optimize Apple version (Faster way to screenshot, code optimizations)
 - Create user-friendly GUI
 - Update model to include multiple maps (Currently doesn't support one map, while being sketchy in some others)
